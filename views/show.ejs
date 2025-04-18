@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Person Details</title>
+</head>
+<body>
+    <h1>Person Details</h1>
+    <p><strong>Name:</strong> <%= person.name %></p>
+    <p><strong>Age:</strong> <%= person.age %></p>
+    <p><strong>Gender:</strong> <%= person.gender %></p>
+    <p><strong>Mobile:</strong> <%= person.mobile %></p>
+    <a href="/person/<%= person._id %>/edit">Edit</a>
+    <a href="/person">Back to List</a>
+</body>
+</html>

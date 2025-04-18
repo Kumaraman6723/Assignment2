@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Person</title>
+</head>
+<body>
+    <h1>Edit Person</h1>
+    <form action="/person/<%= person._id %>?_method=PUT" method="POST">
+        <label>Name: <input type="text" name="name" value="<%= person.name %>" required></label><br>
+        <label>Age: <input type="number" name="age" value="<%= person.age %>" required></label><br>
+        <label>Gender: 
+            <select name="gender" required>
+                <option value="Male" <%= person.gender === 'Male' ? 'selected' : '' %>>Male</option>
+                <option value="Female" <%= person.gender === 'Female' ? 'selected' : '' %>>Female</option>
+                <option value="Other" <%= person.gender === 'Other' ? 'selected' : '' %>>Other</option>
+            </select>
+        </label><br>
+        <label>Mobile: <input type="text" name="mobile" value="<%= person.mobile %>" required></label><br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

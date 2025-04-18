@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>People List</title>
+</head>
+<body>
+    <h1>People List</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Mobile</th>
+            <th>Actions</th>
+        </tr>
+        <% people.forEach(person => { %>
+        <tr>
+            <td><%= person.name %></td>
+            <td><%= person.age %></td>
+            <td><%= person.gender %></td>
+            <td><%= person.mobile %></td>
+            <td>
+                <a href="/person/<%= person._id %>">View</a>
+                <a href="/person/<%= person._id %>/edit">Edit</a>
+                <a href="/person/<%= person._id %>/delete">Delete</a>
+            </td>
+        </tr>
+        <% }); %>
+    </table>
+    <a href="/person/new">Add New Person</a>
+</body>
+</html>
